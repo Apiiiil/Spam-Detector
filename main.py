@@ -33,7 +33,7 @@ X_train_tfidf = vectorizer.fit_transform(X_train)
 x_test = vectorizer.transform(x_test)
 
 # Train the model
-model = LogisticRegression()
+model = LogisticRegression(max_iter =  1000)
 model.fit(X_train_tfidf, y_train)
 
 # Test the model
@@ -55,7 +55,4 @@ while True:
     else:
         print("Not Spam")
 
-    # print(check_spam("Congratulations ! You have won a lottery"))
-    # print(check_spam("Hello. How are you?"))
-    # print(check_spam("Congratulations! You have won a free prize. Claim now"))
-    # print(check_spam("Win cash now! Call this number immediately"))
+
